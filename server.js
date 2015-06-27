@@ -3,7 +3,7 @@ var pg = require('pg'),
     webSockets = {} // userID: webSocket
 
 // CONNECT /:userID_sessionID
-// wscat -c ws://localhost:5200/23.0123456789abcdef0123456789abcdef
+// wscat -c ws://localhost:5200/1.0123456789abcdef0123456789abcdef
 webSocketServer.on('connection', function (webSocket) {
   var userID_sessionID = webSocket.upgradeReq.url.substring(1).split('.')
   var userID = userID_sessionID[0]
